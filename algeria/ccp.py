@@ -14,7 +14,7 @@ class CCP:
         ccc = str(cc % 100).zfill(2)
         return ccc
 
-    def calculate_rip(self, x):
+    def __calculate_rip(self, x):
         # Calculate the rip based on the given value x
         if x < 10:
             return "00799999" + str(self.ccp).zfill(10) + str(x)
@@ -30,7 +30,7 @@ class CCP:
         else:
             x = 97 - (remainder + 85)
 
-        return self.calculate_rip(x) if not only_cle else str(x)
+        return self.__calculate_rip(x) if not only_cle else str(x)
 
     def get_rip_cle(self):
         # Return only the cle of the rip
