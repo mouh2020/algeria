@@ -29,9 +29,9 @@ class CCP:
             x = 97 - (remainder + 85 - 97)
         else:
             x = 97 - (remainder + 85)
-
+            
         return self.__calculate_rip(x) if not only_cle else str(x)
-
-    def get_rip_cle(self):
-        # Return only the cle of the rip
+  
+    def get_rip_cle(self) : 
+        # Return only the cle of the rip 
         return self.get_rip(only_cle=True).zfill(2)

@@ -2,3 +2,4 @@ env
 build
 dist
 algeria.egg-info
+__pycache__/
