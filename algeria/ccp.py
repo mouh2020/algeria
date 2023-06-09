@@ -30,4 +30,3 @@ class CCP :
     def get_rip_cle(self) : 
         # Return only the cle of the rip 
         return self.get_rip(only_cle=True)
-        
