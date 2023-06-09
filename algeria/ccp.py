@@ -29,4 +29,4 @@ class CCP :
                 return "00799999"+ str(self.ccp).zfill(10) + str(y)if not(only_cle) else str(y)
     def get_rip_cle(self) : 
         # Return only the cle of the rip 
-        return self.get_rip(only_cle=True)
+        return self.get_rip(only_cle=True).zfill(2)
