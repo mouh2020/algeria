@@ -65,13 +65,13 @@ from algeria.ccp import CCP
 ccp_account = CCP("1234567890")
 
 cle = ccp_account.get_cle()
-print("Clé CCP:", cle) [45]
+print("Clé CCP:", cle) // 45
 
 rip = ccp_account.get_rip()
-print("RIP:", rip) [0079999912345678906]
+print("RIP:", rip) // 0079999912345678906
 
 rip_cle = ccp_account.get_rip_cle()
-print("RIP Clé:", rip_cle) [//]: 6
+print("RIP Clé:", rip_cle) // 6
 ```
 
 The library was developed with the assistance of ChatGPT and the algorithms extracted from the web app provided [here](https://dzposte.netlify.app/).
