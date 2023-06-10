@@ -73,6 +73,7 @@ print("RIP:", rip) // 0079999912345678906
 rip_cle = ccp_account.get_rip_cle()
 print("RIP Clé:", rip_cle) // 06
 ```
+## Note
 
 The algorithms extracted from the web app provided [here](https://dzposte.netlify.app/) after testing them.
 
