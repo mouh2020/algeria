@@ -70,24 +70,6 @@ rip_cle = ccp_account.get_rip_cle()
 print("RIP Clé:", rip_cle)
 ```
 
-## Example
-
-Here's an example demonstrating the usage of the "algeria" library :
-
-```javascript
-from algeria.ccp import CCP
-
-ccp_account = CCP("1234567890")
-
-cle = ccp_account.get_cle()
-print("Clé CCP:", cle) // 45
-
-rip = ccp_account.get_rip()
-print("RIP:", rip) // 0079999912345678906
-
-rip_cle = ccp_account.get_rip_cle()
-print("RIP Clé:", rip_cle) // 06
-```
 
 The Transaction class provides methods to calculate the fees of a deposit or checkout ammount.
 
