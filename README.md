@@ -1,5 +1,5 @@
 
-# Algeria 🇩🇿
+# 🇩🇿 Algeria 🇩🇿
 
 Algeria is a Python library that allows you to calculate the (clé) and RIP (Relevé d'Identité Postal) of a given CCP (Compte de Chèque Postal) number account. It provides a simple and convenient way to obtain the clé and rip values for CCP accounts. Please note that additional features may be added to the library in the future. You can check features section for any updates.
 
@@ -29,6 +29,7 @@ pip install git+https://github.com/mouh2020/algeria.git
 
 ## 📚 Usage 
 
+## CCP class :
 The CCP class provides methods to calculate the (clé) and (RIP) for a given CCP account number.
 
  - Initialization 
@@ -70,6 +71,7 @@ rip_cle = ccp_account.get_rip_cle()
 print("RIP Clé:", rip_cle)
 ```
 
+## Transaction class :
 
 The Transaction class provides methods to calculate the fees of a deposit or checkout ammount.
 
