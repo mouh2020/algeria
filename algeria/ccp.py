@@ -37,7 +37,7 @@ class CCP:
 class Transaction : 
     def __init__(self,amount : float) : 
         self.amount = amount
-        
+
     def __calculate_fees(self,mode) : 
         if mode == "transfer" : 
             return (math.ceil(self.amount/5000)) * 12 + 18
@@ -51,8 +51,8 @@ class Transaction :
                 z = math.ceil((self.amount - 1000000) / 1000)
                 return z * 6 + 3018
             
-    def get_transfer_fees(self) : 
-        # Return the fees of a payment
+    def get_deposit_fees(self) : 
+        # Return the fees of a a deposit
         return self.__calculate_fees(mode="transfer")
     
     def get_checkout_fees(self) : 
