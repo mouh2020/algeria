@@ -9,6 +9,8 @@ Contributions are welcome! If you would like to contribute to the development of
 - Clé (Compte de Chèque Postal) calculation.
 - RIP (Relevé d'Identité Postal) calculation.
 - RIP's Clé calculation.
+- Deposit fees calculation
+- Checkout fees calculation
 
 
 ## Instalation 📌
@@ -79,6 +81,70 @@ print("RIP:", rip) // 0079999912345678906
 rip_cle = ccp_account.get_rip_cle()
 print("RIP Clé:", rip_cle) // 06
 ```
+
+The Transaction class provides methods to calculate the fees of a deposit or checkout ammount.
+
+ - Initialization 
+
+To create an instance of the Transaction class, pass the amount as a float to the constructor:
+```javascript
+from algeria.ccp import Transaction
+
+transaction = Transaction(2000000)
+```
+
+- Calculating the fees of a deposit transaction
+
+To calculate the fees of a deposit transaction, use the get_deposit_fees method:
+
+```javascript
+transaction_fees = transaction.get_deposit_fees()
+
+print("Deposit fees:", transaction_fees)
+```
+
+- Calculating the fees of a checkout transaction
+
+To calculate the fees of a checkout transaction, use the get_checkout_fees method:
+
+```javascript
+checkout_fees = transaction.get_checkout_fees()
+
+print("Checkout fees:", checkout_fees)
+```
+
+
+## Example
+
+Here's an example demonstrating the usage of the "algeria" library :
+
+```javascript
+from algeria.ccp import CCP,Transaction
+
+ccp_account = CCP("1234567890")
+
+cle = ccp_account.get_cle()
+print("Clé CCP:", cle) // 45
+
+rip = ccp_account.get_rip()
+print("RIP:", rip) // 0079999912345678906
+
+rip_cle = ccp_account.get_rip_cle()
+print("RIP Clé:", rip_cle) // 06
+
+
+
+transaction = Transaction(2000000)
+
+deposit_fees = transaction.get_deposit_fees()
+print("Deposit fees:", deposit_fees)   // 4818
+
+checkout_fees = transaction.get_checkout_fees()
+print("Checkout fees:", checkout_fees) // 9018
+
+```
+
+
 ## Note 💡
 
 The algorithms extracted from the web app provided [here](https://dzposte.netlify.app/) after testing them.
