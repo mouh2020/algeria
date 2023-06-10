@@ -74,7 +74,7 @@ rip_cle = ccp_account.get_rip_cle()
 print("RIP Clé:", rip_cle) // 06
 ```
 
-The library was developed with the assistance of ChatGPT and the algorithms extracted from the web app provided [here](https://dzposte.netlify.app/).
+The algorithms extracted from the web app provided [here](https://dzposte.netlify.app/) after testing them.
 
 
 
