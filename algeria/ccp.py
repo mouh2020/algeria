@@ -51,11 +51,11 @@ class Transaction :
                 z = math.ceil((self.amount - 1000000) / 1000)
                 return z * 6 + 3018
             
-    def get_deposit_fees(self) : 
+    def get_deposit_fees(self) -> float: 
         # Return the fees of a a deposit
         return self.__calculate_fees(mode="transfer")
     
-    def get_checkout_fees(self) : 
+    def get_checkout_fees(self) -> float: 
         # Return the fees of a cheeckout by che
         return self.__calculate_fees(mode="checkout")
 
