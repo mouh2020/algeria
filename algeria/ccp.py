@@ -1,4 +1,4 @@
-import math
+
 class CCP:
     def __init__(self, ccp: str):
         self.ccp = ccp
@@ -33,31 +33,6 @@ class CCP:
     def get_rip_cle(self)-> str : 
         # Return only the cle of the rip 
         return self.get_rip(only_cle=True).zfill(2)
-
-class Transaction : 
-    def __init__(self,amount : float) : 
-        self.amount = amount
-
-    def __calculate_fees(self,mode) : 
-        if mode == "transfer" : 
-            return (math.ceil(self.amount/5000)) * 12 + 18
-        elif mode == "checkout" : 
-            z = math.ceil(self.amount / 1000)
-            if self.amount <= 18000:
-                return z*2+18
-            elif   18000 < self.amount <= 1000000 : 
-                return z * 3 + 18
-            elif self.amount > 1000000 :
-                z = math.ceil((self.amount - 1000000) / 1000)
-                return z * 6 + 3018
-            
-    def get_deposit_fees(self) -> float: 
-        # Return the fees of a a deposit
-        return self.__calculate_fees(mode="transfer")
-    
-    def get_checkout_fees(self) -> float: 
-        # Return the fees of a cheeckout by che
-        return self.__calculate_fees(mode="checkout")
 
 
     
